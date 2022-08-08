@@ -1,4 +1,4 @@
-FROM nvidia/cuda:9.2-devel-ubuntu18.04
+FROM nvidia/cuda:11.6.0-devel-ubuntu20.04
 
 # CUDA version must be compatible with driver version of host:
 # CUDA Toolkit          Linux x86_64 Driver Version
@@ -13,8 +13,7 @@ FROM nvidia/cuda:9.2-devel-ubuntu18.04
 #
 # As of 2019-02-26, driver version 396.37 is suggested
 
-LABEL maintainer "Daniel Park <dpark@broadinstitute.org>"
-LABEL maintainer_other "Christopher Tomkins-Tinch <tomkinsc@broadinstitute.org>"
+LABEL maintainer "This is fork version of broadinstitute which modified for my own usage."
 
 COPY install-*.sh /opt/docker/
 
@@ -22,6 +21,10 @@ COPY install-*.sh /opt/docker/
 # ca-certificates and wget needed for gosu
 # bzip2, liblz4-toolk, and pigz are useful for packaging and archival
 # google-cloud-sdk needed when using this in GCE
+
+# Use https source to pass through Uni acl
+COPY sources.list /etc/apt/
+
 RUN /opt/docker/install-apt_packages.sh
 
 # Set default locale to en_US.UTF-8

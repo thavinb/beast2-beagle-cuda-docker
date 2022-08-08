@@ -1,0 +1,8 @@
+deb https://mirror.kku.ac.th/ubuntu/ focal multiverse restricted main universe
+# deb-src https://mirror.kku.ac.th/ubuntu/ focal multiverse restricted main universe
+deb https://mirror.kku.ac.th/ubuntu/ focal-updates main universe multiverse restricted
+# deb-src https://mirror.kku.ac.th/ubuntu/ focal-updates main universe multiverse restricted
+deb https://mirror.kku.ac.th/ubuntu/ focal-backports restricted main universe multiverse
+# deb-src https://mirror.kku.ac.th/ubuntu/ focal-backports restricted main universe multiverse
+deb https://mirror.kku.ac.th/ubuntu/ focal-security restricted universe main multiverse
+# deb-src https://mirror.kku.ac.th/ubuntu/ focal-security restricted universe main multiverse
